@@ -1,0 +1,383 @@
+%%%%%%%%%%
+% Ravi S. Jonnal - http://pointsofsail.org - rjonnal@indiana.edu
+% Preparing your CV using LaTeX and BibTeX. 
+%
+% URL: http://pointsofsail.org/wikka.php?wakka=LatexCV
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+
+% Much of this template was borrowed from or inspired by Dario
+% Taraborelli's excellent article "Typesetting your academic CV in
+% LaTeX" (http://nitens.org/taraborelli/cvtex) and the associated
+% template, hence the by-sa license above. Where code was lifted
+% directly, an attribution is included. Copied code is indicated with a
+% '% *DT' following the line.
+%
+% Some key differences are noteworthy, and these differences represent
+% the utility of this template (if it has any):
+%
+% 1. It is written in plain LaTeX rather than XeTeX. While the latter
+% is included in most LaTeX distributions (texlive, miktex, and
+% others), I felt that a plain LaTeX template may be useful for some
+% people using legacy systems. There are many good reasons for using
+% XeTeX, chiefly the availability of expert fonts instead of LaTeX's
+% native fonts, which are problematic. (See
+% http://cs.gmu.edu/~sean/stuff/DoingLatexRight/ for a discussion of
+% some of these problems.)
+%
+% 2. It generates publications, proceedings, and presentations from a
+% BibTeX database, using the very nice bibentry package. bibentry is
+% part of the natbib package, which must be installed.
+%
+% Note: it may be necessary to insert \pagebreak[4] at places where
+% page breaks are desired. Because of an oddity with \marginpar, pages
+% are occasionally broken between the marginal year and the item
+% associated with that year. Placing \pagebreak[4] strategically can
+% avoid this problem. If you have a more elegant solution, please do
+% let me know.
+%
+%%%%%%%%%%
+
+
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage{bibentry} % must have natbib package installed
+\usepackage{multicol} % part of most LaTeX distributions
+
+\usepackage[T1]{fontenc} % part of most LaTeX distributions
+% The choice of font below will be constrained by available fonts on
+% your system.  
+
+%\usepackage{palatino}
+%\usepackage{tgschola} 
+%\usepackage{venturisold}
+\usepackage{bookman}
+%\usepackage{georgia}
+
+
+%% Layout margins, marginal notes
+\usepackage{geometry} % part of most LaTeX distributions
+
+%============= kp
+%\usepackage{hyperref}
+\usepackage{verbatim} % For multiline comments: http://www.devdaily.com/blog/post/latex/multi-line-comments-in-latex-begin-123-comment-125-verbatim
+%============= kp
+
+\geometry{letterpaper, marginparsep=7pt, marginparwidth=.6in, textwidth=5.75in, textheight=8in}
+
+%% Do not indent
+\setlength\parindent{0in}
+
+%% MARGIN YEARS
+\usepackage{marginnote} % *DT
+\newcommand{\years}[1]{\marginnote{\small #1}} % *DT
+
+%% PUBLICATIONS, ETC. - takes two arguments; the first is the year of
+%%%% publication and the second is the bibtex label
+\newcommand{\publication}[2]{
+\years{#1} \bibentry{#2}. \par\vspace{0.8mm}
+}
+
+\newcommand{\cd}{$\cdot${ }}
+
+\renewcommand*{\raggedleftmarginnote}{} % *DT
+%\setlength{\marginparsep}{7pt} % *DT
+\reversemarginpar % *DT
+
+% HEADINGS
+\usepackage{sectsty}
+\usepackage[normalem]{ulem}
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
+
+% DOCUMENT
+\begin{document}
+
+%\nobibliography{template_bibliography.bib}
+\nobibliography{bibsOfPapersWithMyName.bib}
+
+{\LARGE Krishna P. Adhikari}\\[.5cm]
+\emph{Ph.D. }, Department of Physics, Old Dominion University\\[0.2cm]
+4600 Elkhorn Ave. Rm 306 \\
+Norfolk, VA, 23529 \\
+%Phone: 757 839 8594\\
+%email: kadhi001@odu.edu
+Phone (Cell): (757) 839 8594 \\
+Fax: (757) 683-3038 \\
+Email: \texttt{kadhi001@odu.edu} \\
+
+
+% =========== This is an addition from my earlier version of CV to the existing template 
+% \section*{Personal}
+% \begin{itemize}
+%\item Born on July 30, 1976 (Chitwan, Nepal).
+% \item Nepalese Citizen.
+% \end{itemize}
+% ===========  (perhaps unncessary because of the following section on Education which shows Nepal twice) 
+
+
+%\section*{Areas of specialization}
+%\noindent
+%Pranks \cd Foul jokes \cd Ennui
+
+
+
+\section*{Education}
+\noindent
+\years{2013}\textsc{\textbf{Ph.D.}} in Experimental Nuclear Physics, Old Dominion University, Norfolk, VA, USA. \\
+     \textbf{Dissertation:} Measurement of the spin structure function $g^D_{1}$ of the deuteron and its moments at low $Q^2$. \\
+     \textbf{Supervisor:} Dr. Sebastian E. Kuhn (\texttt{kuhn@jlab.org}) \\
+\years{2006}\textsc{\textbf{M.S.}} in Physics, Old Dominion University, Norfolk, VA, USA. \\
+\years{2000}\textsc{\textbf{M.Sc.}} in Physics, Tribhuvan University, Kathmandu, Nepal. \\
+\years{1997}\textsc{\textbf{B.Sc.}} in Physics, Mathematics, Chemistry, Birendra Multiple Campus (Tribhuvan University), Bharatpur, Nepal.\\
+
+
+
+\section*{Work Experience}
+\noindent
+
+\subsection*{Old Dominion University, Norfolk, VA, USA}
+\begin{itemize}
+%\item Teaching Assistant, Physics Department, Fall 2004 - Fall 2005
+%\item Research Assistant, J. W. Van Orden (Supervisor), Spring 2006 - Fall 2006
+%\item Teaching Assistant, Physics Department, Spring 2007
+\item Research Assistant, Sebastian E. Kuhn (Supervisor), Summer 2007 - Fall 2013.
+\item Teaching Assistant, Physics Department, Fall 2004 - Fall 2007.
+\end{itemize}
+
+\subsection*{Istituto Nazionale di Fisica Nucleare (INFN), Genoa, Italy}
+\begin{itemize}
+\item Summer Exchange Student, Marko Ripani (Supervisor), September 2009 - November 2009.
+\end{itemize}
+
+\subsection*{Amrit Science College, Thamel, Kathmandu, Nepal}
+\begin{itemize}
+\item Part-time Physics Lecturer, 2002 - June 2004.
+\end{itemize}
+
+\subsection*{Asian College of Higher Studies, Swoyambhu, Kathmandu, Nepal}
+\begin{itemize}
+\item Part-time Physics Lecturer, 2002 - June 2004.
+\end{itemize}
+
+\subsection*{Patan Multiple Campus, Patan Dhoka, Lalitpur, Nepal}
+\begin{itemize}
+\item Part-time Physics Lecturer, July 2002 - March 2004.
+\end{itemize}
+
+\subsection*{BernHardt College, Kalimati, Kathmandu, Nepal}
+\begin{itemize}
+\item Part-time Physics Lecturer, July 2001 - May 2004
+\end{itemize}
+
+\subsection*{Naya Kiran Secondary School, Bharatpur, Chitwan, Nepal}
+\begin{itemize}
+\item Science and Mathematics Teacher, August 1997 - July 1998
+\end{itemize}
+
+
+
+\section*{Computer/Programming Skills/Training}
+\noindent
+%\begin{itemize}
+%\item Windows, Linux, C/C++, Fortran, Java/Eclipse, Perl, Make, ROOT, GEANT, HTML, JavaScript, LaTex
+%\end{itemize}
+\begin{itemize}
+%kp: \item ROOT - an object-oriented program and library developed by CERN, a framework designed for particle physics data analysis.
+\item Working knowledge of the following programming languages and tools
+  \begin{itemize} 
+  \item \textbf{Operating systems}: Microsoft Windows, Linux/Unix 
+  \item \textbf{Office Tools}: Microsoft Office, OpenOffice.org
+  \item \textbf{Programming Languages}: C/C++, Fortran, Visual Basic (VB.NET, Visual Studio), Java (Eclipse), Shell Scripts (Perl, bash, tcsh, Makefile, CMake)
+  \item \textbf{Graphic Editors}: SketchUp, Inkscape, JaxoDraw
+  \item \textbf{Text Formatting (Markup) languages}: LaTex
+  \item \textbf{Web Languages}: HTML, XHTML, JavaScript %, CSS, PHP, ASP
+  \item \textbf{Software packages}:
+    \begin{itemize}
+    \item \textbf{ROOT} - an object-oriented program and library developed by CERN, a framework designed for particle physics data analysis.
+    \item \textbf{GEANT4} - a C++ based toolkit for the simulation of the passage of particles through matter
+    \item \textbf{GSIM} - a GEANT3 based package for the Monte Carlo simulation of the CLAS detector in Jlab.	
+    \end{itemize}
+\end{itemize}
+%kp: \item \href{http://jblevins.org/research/pdest}{PDESolutionTester},  A Mathematica program for the symbolic verification of exact solutions
+%kp:   of nonlinear partial differential equations,  with Jeff Heath and Willy Hereman (2002).
+\end{itemize}
+
+
+
+
+\section*{Schools \& Workshops}
+\noindent
+\begin{itemize}
+\item GEANT4 Tutorial, Jefferson Lab, Newport News, VA, 2012.
+\item National Nuclear Physics Summer School (NNPSS), Chapel Hill, NC, 2011.
+\item DOE/INFN Summer Exchange Program, INFN, Genoa, Italy, 2009.
+\item Hampton University Graduate Summer School (HUGS), Jefferson Lab, Newport News, VA, 2009.
+\item International Workshop on Positrons at Jefferson Lab, Newport News, VA, 2009. %http://www.jlab.org/conferences/JPOS09/
+\item Spin Structure at Long Distance (Workshop), Jefferson Lab, Newport News, VA, 2009.
+\end{itemize}
+
+
+
+\section*{Certifications}
+\noindent
+\begin{itemize}
+\item Radiation Worker I
+\item Responsible Conduct of Research: Physical Science Research.
+\item Big Leadership Training (Office of Student Activities and Leadership, ODU), Nov 2007
+\end{itemize}
+
+
+
+
+\section*{Honors, Awards, \& Fellowships}
+\noindent
+%\years{2011} Award 1, Award agency 1\\
+%\years{2005} Outstanding Scorer in Ph.D. Qualifying Exam, Dept. Of Physics, Old Dominion University \\
+\begin{itemize}
+\item Outstanding Scorer Award (Ph. D. Qualifying Exam), Department of Physics, Old Dominion University, 2005.
+\item Hampton University Graduate Studies Fellwoship for HUGS Summer School, Newport News, VA, June 01 - 19, 2009
+\item INFN Scholarship for the DOE/INFN Summer Exchange Program, INFN, Genova, Italy, Sep 15 - Nov 30, 2009.
+\end{itemize}
+
+
+
+
+\section*{Leadership, Volunteering and Community Service}
+\noindent
+\begin{itemize}
+%\item Volunteered as one of the demonstrators of Physics Demos in several Children's Festival in Norfolk  and Newport News, VA.
+%\item Big Leadership Training (Office of Student Activities and Leadership, ODU), Nov 2007
+\item Norfolk Children Festivals (2004 - 2012), Attending to ODU Physics Demos.
+\item Jlab Open Houses (2004, 2007, 2010), Manning the ODU Physics Demos.
+\item Monarch Mentor to new International Students, Office of Inter-cultural Relations, Old Dominion University, 2006.
+%\item Participation in Monarch Mentor Program (Mentoring New International Students at Old Dominion University), 2006
+\item Multiple Blood and Platelets Donations (Nepal, USA)
+% \end{itemize}    \begin{itemize}
+\end{itemize}
+
+
+\section*{Affiliations}
+\noindent
+%\item ODU Student Organization Affiliations
+\begin{itemize}
+  \item American Physical Society, Current Member 
+  \item Nepal Physical Society, Life Member %(Since 2004)
+  \item CLAS Collaboration, Term Member %(Since 2007)
+  \item Past Member - Physics Graduate Student Association (PGSA) at ODU
+  \item Founding President - Nepali Student Community (NeSCo) at ODU
+  \item Past Member - Global Student Friendship (GSF) at ODU
+%\item Life member, Nepal Physical Society (http://www.nps.org.np/index\_Page354.htm).
+%\item Member, American Physical Society, 2005 - present.
+%\item Member, Nuclear Physics of the American Physical Society, 2005 - present.
+%\item Term Member, CLAS Collaboration, 2007 - present
+%\item Member - Physics Graduate Student Association (Old Dominion University), 2007 - present.
+\end{itemize}
+
+%\section*{Patents}
+%\noindent
+%\years{2008} U.S. Patent 1,234,567,890,123. ``Method and apparatus something incredibly ingenious but totally unmarketable''.
+
+
+
+
+\section*{Publications \& talks}
+
+\subsection*{Conference presentations}
+\noindent
+%\begin{comment}
+\begin{itemize}
+\item K. Adhikari.  Deuteron Spin Structure function $g_1$ at low $Q^2$. APS October Meeting, 2013, Newport News, VA.
+\item K. Adhikari.  Deuteron Spin Structure function $g_1$ at low $Q^2$. APS October Meeting, 2012, Newport Beach, CA.
+\item Mapping Generalized GDH Integral at Low $Q^2$, Poster presentation at National Nuclear Physics Summer School (NNPSS), Chapel Hill, NC, 2011. %\href{http://www.int.washington.edu/NNPSS/schools.html}{National Nuclear Physics Summer School} (NNPSS), 2011 
+\item EG4 Experiment, Poster presentation at Gordon Research Conference on Photonuclear Reactions, Tilton School, NH, 2010. %Dates: 08/01/2010 - 08/06/2010 Location: Tilton School in Tilton NH United States 
+%\item EG4-Analysis Update presentations to several CLAS Collaboration meetings 
+
+\item EG4-update (Oct 12, 2012) for DPWG meeting by K. P. Adhikari.
+\item Deep Processes Working Group (March 19, 10) EG4-Update K. Adhikari).
+\item Deep Processes Working Group (Feb 23, 08) EG4-Status presentation (K. Adhikari).
+\item Deep Processes Working Group (Nov 02, 07) EG4-Status presentation (K. Adhikari).
+
+%\item \textbf{Study of Insolation on Kirtipur and the Performance of Photovoltaic Systems}, Seminar, 4th National Conference on Science and Technology organized by Royal Nepal Academy of Science and Technology (RONAST), March 2004.
+%\item \textbf{An attempt toward the half-life of ozone}, Seminar, 20th annual meeting of Nepal Physical Society, 2003.
+%\item \textbf{Superconductivity}, Physics Department Graduate Student Seminar, ODU, Nov 10, 2004.
+%\item \textbf{EPR Paradox and Bell's Theorem}, Physics Department Graduate Student Seminar, ODU, Nov 9, 2005.
+%\item \textbf{EG4 Update}, Jlab CLAS Collaboration (Deep Processes Working Group) meeting, Nov 2, 2007.
+%\item \textbf{EG4 Update}, Jlab CLAS Collaboration (Deep Processes Working Group) meeting, Feb 23, 2008. 
+%\item \textbf{EG4 experiment}, Nuclear Physics Student Seminar, ODU, July 30, 2008.
+%\item \textbf{EG4 Update}, Nuclear Physics Student Seminar, ODU, June, 2009.
+%\item \textbf{EG4 - a low $Q^2$ CLAS- GDH- measurement}, HUGS Student Seminar, Jlab, June 17, 2009.
+%\item \textbf{EG4 Update}, Jlab CLAS Collaboration (Deep Processes Working Group) meeting, March 19, 2010.
+%\item \textbf{EG4 - Mapping Generalized GDH Sum Rule at Low $Q^2$}, Poster Presentation, Gordon Research Conference on Photonuclear Reactions, Tilton School, Tilton, NH, Aug 1-6, 2010.
+%\item \textbf{EG4 - Mapping Generalized GDH Sum Rule at Low $Q^2$}, Poster Presentation, The 2011 National Nuclear Physics Summer School, University of North Carolina, Chapel Hill, NC, June 20 - July 1, 2011. %http://www.tunl.duke.edu/nnpss/
+
+\end{itemize}
+%\end{comment}
+
+
+
+%\subsection*{Journal articles, first author}
+%\noindent
+
+
+
+%\subsection*{Journal articles, co-author}
+\subsection*{Refereed Publications}
+\noindent
+\begin{itemize}
+\item Co-author on more than 40 CLAS publication papers: \\
+\url{http://inspirehep.net/author/profile/K.P.Adhikari.1}%{http://inspirehep.net/author/profile/K.P.Adhikari.1}
+\end{itemize}
+%\publication{2009}{key_for_publication_3}
+
+%\publication{2011}{key_for_publication_1}
+%\publication{2010}{key_for_publication_2}
+%%%%%%%  \publication{2013}{Dugger:2013crn}
+%%%%%%%  \publication{2013}{Adhikari:2013ija}
+%%%%%%%  \publication{2013}{Moteabbed:2013isu}
+%%%%%%%  \publication{2013}{Moriya:2013hwg}
+%%%%%%%  \publication{2013}{Pomerantz:2013ysu}
+%%%%%%%  \publication{2013}{Tang:2013gsa}
+%%%%%%%  \publication{2013}{Nepali:2013bp}
+%%%%%%%  \publication{2013}{Moriya:2013eb}
+%%%%%%%  \publication{2012}{Hen:2012yva}
+%%%%%%%  \publication{2012}{Khetarpal:2012vs}
+%%%%%%%  \publication{2012}{Bedlinskiy:2012be}
+%%%%%%%  \publication{2012}{Park:2012rn}
+%%%%%%%  \publication{2012}{Mokeev:2012vsa}
+%%%%%%%  \publication{2012}{Baghdasaryan:2012yn}
+%%%%%%%  \publication{2012}{ElFassi:2012nr}
+%%%%%%%  \publication{2012}{Park:2012yf}
+%%%%%%%  \publication{2011}{Keller:2011aw}
+%%%%%%%  \publication{2011}{Daniel:2011nq}
+%%%%%%%  \publication{2011}{Baillie:2011za}
+%%%%%%%  \publication{2011}{CLAS:2011aa}
+%%%%%%%  \publication{2011}{Keller:2011nt}
+%%%%%%%  \publication{2010}{Qian:2010rr}
+%%%%%%%  \publication{2010}{Nasseripour:2010ne}
+%%%%%%%  \publication{2010}{Baghdasaryan:2010nv}
+%%%%%%%  \publication{2010}{Wood:2010ei}
+%%%%%%%  \publication{2010}{Dey:2010hh}
+%%%%%%%  \publication{2010}{Avakian:2010ae}
+%%%%%%%  \publication{2010}{Osipenko:2010sb}
+%%%%%%%  \publication{2009}{AnefalosPereira:2009zw}
+%%%%%%%  \publication{2009}{McCracken:2009ra}
+%%%%%%%  \publication{2009}{Aznauryan:2009mx}
+%%%%%%%  \publication{2009}{Williams:2009yj}
+%%%%%%%  \publication{2009}{Williams:2009aa}
+%%%%%%%  \publication{2009}{Williams:2009ab}
+%%%%%%%  \publication{2009}{Nasseripour:2009in}
+%%%%%%%  \publication{2009}{Qian:2009ab}
+%%%%%%%  \publication{2009}{Battaglieri:2009aa}
+%%%%%%%  \publication{2009}{Carman:2009fi}
+%%%%%%%  \publication{2008}{Lachniet:2008qf}
+%%%%%%%  \publication{2008}{Battaglieri:2008ps}
+%%%%%%%  \publication{2008}{Morrow:2008ek}
+
+
+
+%\publication{2011}{key_for_publication_4}
+
+\bibliographystyle{plain}
+
+\end{document}

@@ -1,0 +1,419 @@
+%%%%%%%%%%
+% Ravi S. Jonnal - http://pointsofsail.org - rjonnal@indiana.edu
+% Preparing your CV using LaTeX and BibTeX. 
+%
+% URL: http://pointsofsail.org/wikka.php?wakka=LatexCV
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+
+% Much of this template was borrowed from or inspired by Dario
+% Taraborelli's excellent article "Typesetting your academic CV in
+% LaTeX" (http://nitens.org/taraborelli/cvtex) and the associated
+% template, hence the by-sa license above. Where code was lifted
+% directly, an attribution is included. Copied code is indicated with a
+% '% *DT' following the line.
+%
+% Some key differences are noteworthy, and these differences represent
+% the utility of this template (if it has any):
+%
+% 1. It is written in plain LaTeX rather than XeTeX. While the latter
+% is included in most LaTeX distributions (texlive, miktex, and
+% others), I felt that a plain LaTeX template may be useful for some
+% people using legacy systems. There are many good reasons for using
+% XeTeX, chiefly the availability of expert fonts instead of LaTeX's
+% native fonts, which are problematic. (See
+% http://cs.gmu.edu/~sean/stuff/DoingLatexRight/ for a discussion of
+% some of these problems.)
+%
+% 2. It generates publications, proceedings, and presentations from a
+% BibTeX database, using the very nice bibentry package. bibentry is
+% part of the natbib package, which must be installed.
+%
+% Note: it may be necessary to insert \pagebreak[4] at places where
+% page breaks are desired. Because of an oddity with \marginpar, pages
+% are occasionally broken between the marginal year and the item
+% associated with that year. Placing \pagebreak[4] strategically can
+% avoid this problem. If you have a more elegant solution, please do
+% let me know.
+%
+%%%%%%%%%%
+
+\documentclass[10pt, letterpaper]{article}
+
+
+\usepackage{bibentry} % must have natbib package installed
+
+\usepackage{multicol} % part of most LaTeX distributions
+
+\usepackage[T1]{fontenc} % part of most LaTeX distributions
+% The choice of font below will be constrained by available fonts on
+% your system.  
+
+%\usepackage{palatino}
+%\usepackage{tgschola} 
+%\usepackage{venturisold}
+\usepackage{bookman}
+%\usepackage{georgia}
+
+%% Layout margins, marginal notes
+\usepackage{geometry} % part of most LaTeX distributions
+
+%============= kp
+%\usepackage{hyperref}
+\usepackage{verbatim} % For multiline comments: http://www.devdaily.com/blog/post/latex/multi-line-comments-in-latex-begin-123-comment-125-verbatim
+%============= kp
+
+\geometry{letterpaper, marginparsep=7pt, marginparwidth=.6in, textwidth=5.75in, textheight=8in}
+
+%% Do not indent
+\setlength\parindent{0in}
+
+%% MARGIN YEARS
+\usepackage{marginnote} % *DT
+\newcommand{\years}[1]{\marginnote{\small #1}} % *DT
+
+%% PUBLICATIONS, ETC. - takes two arguments; the first is the year of
+%%%% publication and the second is the bibtex label
+\newcommand{\publication}[2]{ \years{#1} \bibentry{#2}. \par\vspace{0.8mm}  }
+\newcommand{\publicationNyr}[1]{ \bibentry{#1}. \par\vspace{0.8mm}  }
+
+\newcommand{\cd}{$\cdot${ }}
+
+\renewcommand*{\raggedleftmarginnote}{} % *DT
+%\setlength{\marginparsep}{7pt} % *DT
+\reversemarginpar % *DT
+
+
+% HEADINGS
+\usepackage{sectsty}
+
+\usepackage[normalem]{ulem}
+
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
+
+
+%\input{/home/kpadhikari/Dropbox/TestFiles/Texmaker/kpAddedPackages.tex} 
+%\input{/home/kpadhikari/Dropbox/TestFiles/Texmaker/textgreek.sty} 
+
+% DOCUMENT
+\begin{document}
+
+%\nobibliography{template_bibliography.bib}
+\nobibliography{bibsOfPapersWithMyName.bib}
+
+{\LARGE Krishna P. Adhikari, \emph{Ph.D. }} \\[.5cm]
+%%%%%Department of Physics, Old Dominion University\\[0.2cm]
+%%%%4600 Elkhorn Ave. Rm 306 \\ Norfolk, VA, 23529 \\
+7 Dorsey Rd Apt D \\
+Newport News VA, 23606 \\
+%4707 Killam Ave Apt B4 \\ Norfolk, VA, 23508 \\
+%Phone: 757 839 8594\\ %email: kadhi001@odu.edu
+Phone (Cell): (757) 839 8594 \\
+%Fax: (757) 683-3038 \\
+Email: \texttt{kadhi001@odu.edu, adhikari@jlab.org} \\
+
+
+% =========== This is an addition from my earlier version of CV to the existing template 
+% \section*{Personal}
+% \begin{itemize}
+%\item Born on July 30, 1976 (Chitwan, Nepal).
+% \item Nepalese Citizen.
+% \end{itemize}
+% ===========  (perhaps unncessary because of the following section on Education which shows Nepal twice) 
+
+
+%\section*{Areas of specialization}
+%\noindent
+%Pranks \cd Foul jokes \cd Ennui
+
+
+
+\section*{Education}
+\noindent
+    \textbf{Ph.D.}, Physics, Old Dominion University, Norfolk, VA, USA.  \hfill Dec 2013\\
+    %\begin{Verbatim}
+       \hspace*{5 mm} \textbf{Dissertation:} Measurement of the spin structure function $g^D_{1}$ \\
+       \hspace*{10 mm} of the deuteron and its moments at low $Q^2$. \\
+       \hspace*{5 mm} \textbf{Supervisor:} Dr. Sebastian E. Kuhn (\texttt{kuhn@jlab.org}) \\
+    %\end{Verbatim}
+    \textbf{M.S.}, Physics, Old Dominion University, Norfolk, VA, USA. \hfill 2006 \\ 
+    \textbf{M.Sc.}, Physics, Tribhuvan University, Kathmandu, Nepal. \hfill 2000 \\ 
+    \textbf{B.Sc.}, Physics, Mathematics, Chemistry, Tribhuvan University, Nepal. \hfill 1997 %\\ %\years{1997}
+
+
+\section*{Work Experience}
+\noindent
+		{\bf Research Experience:} \\
+		%And, just recently, I have joined the JLab’s HD-ice group for a few months as a “Casual” TD-I to gain some skills and experience in cryogenics, the new polarized target technology and hardware in general. 
+		Postdoctoral Research Associate (Dipangkar Dutta, Supervisor), \\
+		 \hspace*{3 mm} Mississippi State University \hfill Since Sep 2014 \\
+	    Temporary technical worker in JLab's HDice group \hfill Feb-Aug 2014\\
+		Graduate Research Assistant (S. Kuhn, Supervisor), \\
+		\hspace*{3 mm} Old Dominion University \hfill 2007 - 2013 \\
+		Won prestigious fellowship for DOE/INFN Summer Exchange Program, \\
+		\hspace*{3 mm} INFN, Genoa, Italy \hfill 2009 \\
+		Participated in studying Insolation and Photovoltaic system, TU, Nepal. \hfill 2003 \\
+		Assisted a senior student in operating Brewer Spectrometer, TU, Nepal. \hfill 2000 \\
+
+		{\bf Teaching Experience:} \\
+		Teaching Assistant, Physics, Old Dominion University \hfill 2004 - 2007 \\
+		Part-time lecturer of undergraduate level Physics\\
+		\hspace*{3 mm} Amrit Science College, Thamel, Kathmandu, Nepal. \hfill 2002 - 2004 \\
+		\hspace*{3 mm} Asian College of Higher Studies, Kathmandu, Nepal. \hfill 2002 - 2004 \\
+		\hspace*{3 mm} Patan Multiple Campus, Lalitpur, Nepal. \hfill 2002 - 2004 \\
+		\hspace*{3 mm} BernHardt College, Kalimati, Kathmandu, Nepal. \hfill 2001 - 2004 \\
+		Science and Mathematics teacher, \\
+		\hspace*{3 mm} Naya Kiran Secondary School, Chitwan, Nepal.               \hfill 1997 - 1998
+
+
+
+
+
+\section*{Computer/Programming Skills/Training}
+\noindent
+%\begin{itemize}
+%\item Windows, Linux, C/C++, Fortran, Java/Eclipse, Perl, Make, ROOT, GEANT, HTML, JavaScript, LaTex
+%\end{itemize}
+\begin{itemize}
+%kp: \item ROOT - an object-oriented program and library developed by CERN, a framework designed for particle physics data analysis.
+\item Working knowledge of the following programming languages and tools
+  \begin{itemize} 
+  \item \textbf{Operating systems}: Microsoft Windows, Linux/Unix 
+  \item \textbf{Office Tools}: Microsoft Office, OpenOffice.org
+  \item \textbf{Programming Languages}: C/C++, Fortran, Visual Basic (VB.NET, Visual Studio), Java (Eclipse), Shell Scripts (Perl, bash, tcsh, Makefile, CMake)
+  \item \textbf{Graphic Editors}: SketchUp, Inkscape, JaxoDraw
+  \item \textbf{Text Formatting (Markup) languages}: LaTex
+  \item \textbf{Web Languages}: HTML, XHTML, JavaScript %, CSS, PHP, ASP
+  \item \textbf{Software packages}:
+    \begin{itemize}
+    \item \textbf{ROOT} - an object-oriented program and library developed by CERN, a framework designed for particle physics data analysis.
+    \item \textbf{GEANT4} - a C++ based toolkit for the simulation of the passage of particles through matter
+    \item \textbf{GSIM} - a GEANT3 based package for the Monte Carlo simulation of the CLAS detector in Jlab.	
+    \end{itemize}
+\end{itemize}
+%kp: \item \href{http://jblevins.org/research/pdest}{PDESolutionTester},  A Mathematica program for the symbolic verification of exact solutions
+%kp:   of nonlinear partial differential equations,  with Jeff Heath and Willy Hereman (2002).
+\end{itemize}
+
+
+
+
+\section*{Schools \& Workshops}
+\noindent
+\begin{itemize} 
+\item GEANT4 Tutorial, Jefferson Lab, Newport News, VA,  \hfill 2012
+\item National Nuclear Physics Summer School (NNPSS), Chapel Hill, NC,  \hfill 2011
+\item CLAS12 Software Workshop, U. of Richmond, \hfill May 2010 %http://www.jlab.org/conferences/CLAS12Software/
+\item DOE/INFN Summer Exchange Program, INFN, Genoa, Italy,  \hfill 2009
+\item Hampton University Graduate Summer School (HUGS), \\
+\hspace*{3 mm} Jefferson Lab, Newport News, VA,  \hfill 2009
+\item International Workshop on Positrons at Jefferson Lab, \\
+\hspace*{3 mm} Newport News, VA,  \hfill 2009 %http://www.jlab.org/conferences/JPOS09/
+\item Spin Structure at Long Distance (Workshop), Jefferson Lab, \\
+\hspace*{3 mm} Newport News, VA,  \hfill 2009
+\end{itemize}
+
+
+
+\section*{Trainings/Certifications}
+\noindent
+\begin{itemize}
+\item Radiation and Lead Worker trainings, JLab
+\item Oxygen Deficiency Hazards, JLab, \hfill Since 2008
+\item Fire and Ladder Safety trainings, JLab, \hfill June 2014
+\item Pressure Systems Awareness training (SAF130A), JLab, \hfill June 2014
+\item Responsible Conduct of Research: Physical Science Research \hfill 2013
+\item Leadership Training (Office of Student Activities and \\
+\hspace*{3 mm} Leadership, ODU), \hfill Nov 2007
+\end{itemize}
+
+
+
+
+\section*{Honors, Awards, \& Fellowships}
+\noindent
+%\years{2011} Award 1, Award agency 1\\
+%\years{2005} Outstanding Scorer in Ph.D. Qualifying Exam, Dept. Of Physics, Old Dominion University \\
+\begin{itemize}
+\item Award for highest score (Ph. D. Qualifying Exam), Department of Physics, Old Dominion University \hfill 2005
+%\item Hampton University Graduate Studies Fellwoship for HUGS Summer School, Newport News, VA \hfill June  2009
+\item INFN Scholarship for the DOE/INFN Summer Exchange Program, INFN, Genova, Italy \hfill 2009 
+\end{itemize}
+
+
+
+
+\section*{Leadership, Volunteering and Community Service}
+\noindent
+  {\bf Volunteering / Community Service: } \\
+  Showcased several ODU Physics Demos during multiple Norfolk Children \\
+  \hspace*{3 mm} Festivals, and Open Houses at ODU and Jefferson Lab. \\
+  Monarch Mentor to new International Students, Office of Inter-cultural \\
+  \hspace*{3 mm} Relations, Old Dominion University, 2006.\\
+  {\bf Leadership Activities: } \\
+  Monarch Mentor Training (2006) and Leadership Training (2007) \\
+  \hspace*{3 mm} (from the Office of Inter-cultural Relations, Old Dominion University).\\
+  Helped found Nepali Student Community (NeSCo) at ODU \\
+  \hspace*{3 mm} (served as the founding President) 
+
+
+
+\section*{Affiliations}
+\noindent
+%\item ODU Student Organization Affiliations
+\begin{itemize}
+  \item American Physical Society, Current Member 
+  \item Nepal Physical Society, Life Member %(Since 2004)
+  \item CLAS Collaboration, Term Member %(Since 2007)
+  \item Past Member - Physics Graduate Student Association (PGSA)
+  \item Founding President - Nepali Student Community (NeSCo)
+  \item Past Member - Global Student Friendship (GSF)
+%\item Life member, Nepal Physical Society (http://www.nps.org.np/index\_Page354.htm).
+%\item Member, American Physical Society, 2005 - present.
+%\item Member, Nuclear Physics of the American Physical Society, 2005 - present.
+%\item Term Member, CLAS Collaboration, 2007 - present
+%\item Member - Physics Graduate Student Association (Old Dominion University), 2007 - present.
+\end{itemize}
+
+%\section*{Patents}
+%\noindent
+%\years{2008} U.S. Patent 1,234,567,890,123. ``Method and apparatus something incredibly ingenious but totally unmarketable''.
+
+
+
+
+%\section*{Publications \& talks}
+%\section*{Publications \& talks}
+%\subsection*{Conference presentations}
+\section*{Conference presentations}
+\noindent
+%\begin{comment}
+\begin{itemize}
+\item K. Adhikari.  Deuteron Spin Structure function $g_1$ at low $Q^2$. APS October Meeting, Newport News, VA.  \hfill  2013
+\item K. Adhikari.  Deuteron Spin Structure function $g_1$ at low $Q^2$. APS October Meeting,   Newport Beach, CA. \hfill   2012
+\item Mapping Generalized GDH Integral at Low $Q^2$, Poster presentation at National Nuclear Physics Summer School (NNPSS), Chapel Hill, NC. \hfill  2011 %\href{http://www.int.washington.edu/NNPSS/schools.html}{National Nuclear Physics Summer School} (NNPSS), 2011 
+\item EG4 Experiment, Poster presentation at Gordon Research Conference on Photonuclear Reactions, Tilton School, NH \hfill   2010 %Dates: 08/01/2010 - 08/06/2010 Location: Tilton School in Tilton NH United States 
+%\item EG4-Analysis Update presentations to several CLAS Collaboration meetings 
+
+%\item EG4-update (Oct 12, 2012) for DPWG meeting by K. P. Adhikari.
+%\item EG4-Status-Update presentation, \href{http://www.jlab.org/Hall-B/claschair/Clas\_Chair\_page.htm}{CLAS Collaboration} - Deep Processes Working Group Meeting, Oct 12, 2012
+\item EG4-Status-Update presentation, CLAS Collaboration - Deep Processes Working Group Meeting, Oct 12 \hfill    2012
+\item EG4-Status-Update presentation, CLAS Collaboration - Deep Processes Working Group Meeting \hfill   Mar 19, 2010
+\item EG4-Status-Update presentation, CLAS Collaboration - Deep Processes Working Group Meeting \hfill   Feb 23, 2008
+\item EG4-Status-Update presentation, CLAS Collaboration - Deep Processes Working Group Meeting \hfill    Nov 02, 2007 
+
+%\item \textbf{Study of Insolation on Kirtipur and the Performance of Photovoltaic Systems}, Seminar, 4th National Conference on Science and Technology organized by Royal Nepal Academy of Science and Technology (RONAST), March 2004.
+%\item \textbf{An attempt toward the half-life of ozone}, Seminar, 20th annual meeting of Nepal Physical Society, 2003.
+%\item \textbf{Superconductivity}, Physics Department Graduate Student Seminar, ODU, Nov 10, 2004.
+%\item \textbf{EPR Paradox and Bell's Theorem}, Physics Department Graduate Student Seminar, ODU, Nov 9, 2005.
+%\item \textbf{EG4 Update}, Jlab CLAS Collaboration (Deep Processes Working Group) meeting, Nov 2, 2007.
+%\item \textbf{EG4 Update}, Jlab CLAS Collaboration (Deep Processes Working Group) meeting, Feb 23, 2008. 
+%\item \textbf{EG4 experiment}, Nuclear Physics Student Seminar, ODU, July 30, 2008.
+%\item \textbf{EG4 Update}, Nuclear Physics Student Seminar, ODU, June, 2009.
+%\item \textbf{EG4 - a low $Q^2$ CLAS- GDH- measurement}, HUGS Student Seminar, Jlab, June 17, 2009.
+%\item \textbf{EG4 Update}, Jlab CLAS Collaboration (Deep Processes Working Group) meeting, March 19, 2010.
+%\item \textbf{EG4 - Mapping Generalized GDH Sum Rule at Low $Q^2$}, Poster Presentation, Gordon Research Conference on Photonuclear Reactions, Tilton School, Tilton, NH, Aug 1-6, 2010.
+%\item \textbf{EG4 - Mapping Generalized GDH Sum Rule at Low $Q^2$}, Poster Presentation, The 2011 National Nuclear Physics Summer School, University of North Carolina, Chapel Hill, NC, June 20 - July 1, 2011. %http://www.tunl.duke.edu/nnpss/
+
+\end{itemize}
+%\end{comment}
+
+
+
+
+
+
+
+
+%\subsection*{Journal articles, first author}
+%\noindent
+
+
+
+
+%\subsection*{Journal articles, co-author}
+%\subsection*{Refereed Publications}
+\section*{Refereed Publications}
+\noindent
+\textbf{Co-author on more than 40 CLAS publication papers} 
+
+%\subsubsection*{2013 Publications}
+\subsection*{2013 Publications}
+\noindent
+%\publication{2009}{key_for_publication_3}
+
+%\publication{2011}{key_for_publication_1}
+%\publication{2010}{key_for_publication_2}
+\publicationNyr{Dugger:2013crn}
+\publicationNyr{Adhikari:2013ija}
+\publicationNyr{Moteabbed:2013isu}
+\publicationNyr{Moriya:2013hwg}
+\publicationNyr{Pomerantz:2013ysu}
+\publicationNyr{Tang:2013gsa}
+\publicationNyr{Nepali:2013bp}
+\publicationNyr{Moriya:2013eb}
+%%%%%%%  \publication{2012}{Hen:2012yva}
+%%%%%%%  \publication{2012}{Khetarpal:2012vs}
+%%%%%%%  \publication{2012}{Bedlinskiy:2012be}
+%%%%%%%  \publication{2012}{Park:2012rn}
+%%%%%%%  \publication{2012}{Mokeev:2012vsa}
+%%%%%%%  \publication{2012}{Baghdasaryan:2012yn}
+%%%%%%%  \publication{2012}{ElFassi:2012nr}
+%%%%%%%  \publication{2012}{Park:2012yf}
+%%%%%%%  \publication{2011}{Keller:2011aw}
+%%%%%%%  \publication{2011}{Daniel:2011nq}
+%%%%%%%  \publication{2011}{Baillie:2011za}
+%%%%%%%  \publication{2011}{CLAS:2011aa}
+%%%%%%%  \publication{2011}{Keller:2011nt}
+%%%%%%%  \publication{2010}{Qian:2010rr}
+%%%%%%%  \publication{2010}{Nasseripour:2010ne}
+%%%%%%%  \publication{2010}{Baghdasaryan:2010nv}
+%%%%%%%  \publication{2010}{Wood:2010ei}
+%%%%%%%  \publication{2010}{Dey:2010hh}
+%%%%%%%  \publication{2010}{Avakian:2010ae}
+%%%%%%%  \publication{2010}{Osipenko:2010sb}
+%%%%%%%  \publication{2009}{AnefalosPereira:2009zw}
+%%%%%%%  \publication{2009}{McCracken:2009ra}
+%%%%%%%  \publication{2009}{Aznauryan:2009mx}
+%%%%%%%  \publication{2009}{Williams:2009yj}
+%%%%%%%  \publication{2009}{Williams:2009aa}
+%%%%%%%  \publication{2009}{Williams:2009ab}
+%%%%%%%  \publication{2009}{Nasseripour:2009in}
+%%%%%%%  \publication{2009}{Qian:2009ab}
+%%%%%%%  \publication{2009}{Battaglieri:2009aa}
+%%%%%%%  \publication{2009}{Carman:2009fi}
+%%%%%%%  \publication{2008}{Lachniet:2008qf}
+%%%%%%%  \publication{2008}{Battaglieri:2008ps}
+%%%%%%%  \publication{2008}{Morrow:2008ek}
+\bibliographystyle{plain}
+
+
+\subsection*{Additional Publications}
+\noindent
+%\textbf{For more, please look at} \\
+ \url{http://inspirehep.net/author/profile/K.P.Adhikari.1}
+
+%\subsubsection{Older CLAS publications}
+%\begin{itemize}
+%\item %Co-author on more than 40 CLAS publication papers: \\
+%\url{http://inspirehep.net/author/profile/K.P.Adhikari.1}%{http://inspirehep.net/author/profile/K.P.Adhikari.1}
+%\end{itemize}
+
+
+
+
+
+\section*{References}
+\textbf{Dr. Sebastian E. Kuhn}, Professor, Old Dominion University, 4600 Elkhorn Ave, Room 306, Norfolk, VA 23529 \\
+Email: \texttt{skuhn@odu.edu, kuhn@jlab.org}; Phone: \texttt{757 683 5804} \\
+
+\textbf{Dr. Gail E. Dodge}, Professor, Old Dominion University, 4600 Elkhorn Ave, Room 306, Norfolk, VA 23529 \\
+Email: \texttt{gdodge@odu.edu, gail@jlab.org}; Phone: \texttt{703 292 8958}\\
+
+\textbf{Dr. Alexandre Deur}, Staff Scientist, Jefferson Lab, 12000 Jefferson Avenue, Newport News, VA 23606 \\
+Email: \texttt{deurpam@jlab.org}; Phone: \texttt{757 584 7526}\\ 
+
+\textbf{Dr. Marco Ripani}, Senior Scientist, INFN, Sezione di Genova, Via Dodecaneso 33, 16146, Genova, Italy \\
+Email: \texttt{ripani@ge.infn.it, Marco.Ripani@ge.infn.it}; Phone: \texttt{+39-010-3536458}\\ 
+\end{document}
