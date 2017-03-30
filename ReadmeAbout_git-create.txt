@@ -28,7 +28,7 @@ git add  dirname/filenames
 
 4) =======  Commit the added files to the repo so that it can be pushed to the remote repo in github
 
-git commit -a 'comment about the commit'
+git commit -am 'comment about the commit'
 
 5) =======  Before the first push, we have to also configure it to connect it to the github repo as follows:
 
